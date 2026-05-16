@@ -1,0 +1,99 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f3d39"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <!-- Icon gradient -->
+    <linearGradient id="iconGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a7f3d0"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Clip path for rounded square -->
+    <clipPath id="clip">
+      <rect width="48" height="48" rx="12" ry="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="48" height="48" rx="12" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.12" stroke="#5eead4" stroke-width="0.5">
+    <line x1="12" y1="0" x2="12" y2="48"/>
+    <line x1="24" y1="0" x2="24" y2="48"/>
+    <line x1="36" y1="0" x2="36" y2="48"/>
+    <line x1="0" y1="12" x2="48" y2="12"/>
+    <line x1="0" y1="24" x2="48" y2="24"/>
+    <line x1="0" y1="36" x2="48" y2="36"/>
+  </g>
+
+  <!-- Circuit nodes (small dots at intersections) -->
+  <g fill="#5eead4" opacity="0.25">
+    <circle cx="12" cy="12" r="1.2"/>
+    <circle cx="36" cy="12" r="1.2"/>
+    <circle cx="12" cy="36" r="1.2"/>
+    <circle cx="36" cy="36" r="1.2"/>
+  </g>
+
+  <!-- Main mark: stylised lightning bolt / cost-drop arrow
+       Two overlapping shapes:
+       1. A bold downward-trending line (cost graph)
+       2. A lightning bolt overlay
+  -->
+
+  <!-- Cost trend line: left anchor -> peak -> drop -->
+  <polyline
+    points="10,30 18,18 26,24 38,11"
+    fill="none"
+    stroke="url(#iconGrad)"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />
+
+  <!-- Arrowhead at end of trend line -->
+  <polyline
+    points="33,10 38,11 37,16"
+    fill="none"
+    stroke="url(#iconGrad)"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Lightning bolt (fast AI) overlaid, slightly transparent -->
+  <path
+    d="M26 8 L18 24 H23 L17 40 L31 20 H26 L30 8 Z"
+    fill="url(#iconGrad)"
+    opacity="0.28"
+  />
+
+  <!-- Bright lightning bolt outline -->
+  <path
+    d="M26 9 L18.5 24 H23 L17.5 39 L30.5 20.5 H25.5 L29.5 9 Z"
+    fill="none"
+    stroke="url(#iconGrad)"
+    stroke-width="0.8"
+    opacity="0.6"
+  />
+
+  <!-- Node dots on the trend line -->
+  <circle cx="10" cy="30" r="2.2" fill="#2dd4bf" filter="url(#glow)"/>
+  <circle cx="18" cy="18" r="2.2" fill="#2dd4bf" filter="url(#glow)"/>
+  <circle cx="26" cy="24" r="2.2" fill="#2dd4bf" filter="url(#glow)"/>
+  <circle cx="38" cy="11" r="2.8" fill="#a7f3d0" filter="url(#glow)"/>
+
+  <!-- Border ring -->
+  <rect width="48" height="48" rx="12" fill="none" stroke="rgba(94,234,212,0.2)" stroke-width="1"/>
+</svg>

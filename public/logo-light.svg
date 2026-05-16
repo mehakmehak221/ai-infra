@@ -1,0 +1,40 @@
+<svg width="220" height="44" viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgLL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f3d39"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="iconLL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a7f3d0"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <filter id="gLL">
+      <feGaussianBlur stdDeviation="0.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Icon mark (44×44) -->
+  <rect width="44" height="44" rx="11" fill="url(#bgLL)"/>
+  <g opacity="0.1" stroke="#5eead4" stroke-width="0.5">
+    <line x1="11" y1="0" x2="11" y2="44"/>
+    <line x1="22" y1="0" x2="22" y2="44"/>
+    <line x1="33" y1="0" x2="33" y2="44"/>
+    <line x1="0" y1="11" x2="44" y2="11"/>
+    <line x1="0" y1="22" x2="44" y2="22"/>
+    <line x1="0" y1="33" x2="44" y2="33"/>
+  </g>
+  <polyline points="8,32 16,18 24,24 36,10" fill="none" stroke="url(#iconLL)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#gLL)"/>
+  <polyline points="31,9 36,10 35,15" fill="none" stroke="url(#iconLL)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M25 7 L17.5 22 H22 L16.5 37 L29.5 19 H24.5 L28.5 7 Z" fill="url(#iconLL)" opacity="0.22"/>
+  <circle cx="8" cy="32" r="2" fill="#2dd4bf" filter="url(#gLL)"/>
+  <circle cx="16" cy="18" r="2" fill="#2dd4bf" filter="url(#gLL)"/>
+  <circle cx="24" cy="24" r="2" fill="#2dd4bf" filter="url(#gLL)"/>
+  <circle cx="36" cy="10" r="2.6" fill="#a7f3d0" filter="url(#gLL)"/>
+  <rect width="44" height="44" rx="11" fill="none" stroke="rgba(94,234,212,0.25)" stroke-width="1"/>
+
+  <!-- Wordmark — white text for dark backgrounds -->
+  <text x="54" y="17" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="-0.3" fill="#f0fdfa">AI Infra</text>
+  <circle cx="54" cy="26" r="1.5" fill="#2dd4bf" opacity="0.5"/>
+  <text x="61" y="30" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" letter-spacing="0.2" fill="rgba(255,255,255,0.55)">Cost Optimizer</text>
+</svg>
