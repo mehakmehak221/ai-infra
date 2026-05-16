@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { hero } from "@/lib/content";
+import { CtaActions } from "@/components/lead/CtaActions";
 import { scrollToHash } from "@/lib/scroll";
 import { springScroll, tweenReveal } from "@/components/motion/variants";
 
@@ -117,9 +118,13 @@ export function Navbar() {
             animate={{ opacity: 1, scale: 1 }}
             transition={tweenReveal(0.55, 0.52)}
           >
-            <a href="#" className="btn-primary !px-5 !py-2.5 text-xs">
+            <CtaActions
+              action="form"
+              formContext="Navbar"
+              className="btn-primary !px-5 !py-2.5 text-xs"
+            >
               {hero.ctaPrimary}
-            </a>
+            </CtaActions>
           </motion.div>
 
           <motion.button
@@ -183,9 +188,13 @@ export function Navbar() {
                   </a>
                 ))}
                 <div className="mt-4">
-                  <a href="#" className="btn-primary w-full justify-center">
+                  <CtaActions
+                    action="form"
+                    formContext="Mobile menu"
+                    className="btn-primary w-full justify-center"
+                  >
                     {hero.ctaPrimary}
-                  </a>
+                  </CtaActions>
                 </div>
               </nav>
             </motion.div>

@@ -4,7 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Play } from "lucide-react";
 import { hero } from "@/lib/content";
-import { loopTransition, springHover, tweenReveal } from "@/components/motion/variants";
+import { loopTransition, tweenReveal } from "@/components/motion/variants";
+import { CtaActions } from "@/components/lead/CtaActions";
 import { HeroBackdrop } from "@/components/motion/HeroBackdrop";
 
 const wordContainer = {
@@ -76,11 +77,9 @@ export function Hero() {
           transition={tweenReveal(0.85, 0.62)}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.03, y: -3 }}
-            whileTap={{ scale: 0.98 }}
-            transition={springHover}
+          <CtaActions
+            action="form"
+            formContext="Hero — Start Free Audit"
             className="btn-primary btn-glow relative overflow-hidden shadow-xl shadow-teal-500/30"
           >
             <span className="relative z-10 flex items-center gap-2">
@@ -92,17 +91,14 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4" />
               </motion.span>
             </span>
-          </motion.a>
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.03, y: -3, borderColor: "rgba(45,212,191,0.6)" }}
-            whileTap={{ scale: 0.98 }}
-            transition={springHover}
+          </CtaActions>
+          <CtaActions
+            action="calendly"
             className="glass-btn inline-flex items-center gap-2 rounded-xl px-7 py-3 text-sm font-semibold text-stone-200"
           >
             <Play className="h-4 w-4 fill-current" />
             {hero.ctaSecondary}
-          </motion.a>
+          </CtaActions>
         </motion.div>
 
         <motion.p
@@ -130,29 +126,8 @@ export function Hero() {
         />
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={tweenReveal(0.8, 1.45)}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={loopTransition(2.8)}
-          className="flex flex-col items-center gap-2"
-        >
-          <span className="text-[10px] font-medium uppercase tracking-widest text-stone-600">
-            Scroll
-          </span>
-          <div className="h-8 w-5 rounded-full border border-stone-600/60 p-1">
-            <motion.div
-              animate={{ y: [0, 10, 0], opacity: [1, 0.4, 1] }}
-              transition={loopTransition(2.8)}
-              className="mx-auto h-1.5 w-1 rounded-full bg-teal-400"
-            />
-          </div>
-        </motion.div>
-      </motion.div>
+      
+      
     </section>
   );
 }

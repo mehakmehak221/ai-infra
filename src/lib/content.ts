@@ -9,7 +9,7 @@ export const hero = {
   subheadline:
     "Track, analyze, and reduce your LLM, GPU, cloud, and inference costs across providers in real time.",
   ctaPrimary: "Start Free Audit",
-  ctaSecondary: "Book Demo",
+  ctaSecondary: "Book a call",
   trust:
     "Works with OpenAI, Anthropic, Groq, AWS, GCP, Azure, RunPod, Together AI, Ollama, and custom GPU clusters.",
 } as const;
@@ -180,7 +180,7 @@ export const finalCta = {
   subheadline:
     "Optimize costs, improve efficiency, and gain complete visibility into your AI stack.",
   ctaPrimary: "Start Free",
-  ctaSecondary: "Talk to Sales",
+  ctaSecondary: "Book consultation",
 } as const;
 
 export const footerTaglines = [

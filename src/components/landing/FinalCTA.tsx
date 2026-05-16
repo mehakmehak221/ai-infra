@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { ArrowRight, PhoneCall } from "lucide-react";
 import { images, imageAlt, IMAGE_QUALITY } from "@/lib/images";
+import { CtaActions } from "@/components/lead/CtaActions";
 import { finalCta } from "@/lib/content";
 import { Section } from "@/components/motion/Section";
 import { easeLoop, easePremium } from "@/components/motion/variants";
@@ -69,10 +70,9 @@ export function FinalCTA() {
             transition={{ delay: 0.35, duration: 0.75, ease: easePremium }}
             className="mt-12 flex flex-wrap items-center justify-center gap-4"
           >
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.04, y: -3 }}
-              whileTap={{ scale: 0.97 }}
+            <CtaActions
+              action="form"
+              formContext="Final CTA — Start Free"
               className="btn-primary btn-glow relative overflow-hidden shadow-2xl shadow-teal-500/25"
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -84,16 +84,14 @@ export function FinalCTA() {
                   <ArrowRight className="h-4 w-4" />
                 </motion.span>
               </span>
-            </motion.a>
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.04, y: -3 }}
-              whileTap={{ scale: 0.97 }}
+            </CtaActions>
+            <CtaActions
+              action="calendly"
               className="glass-btn inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold text-stone-200"
             >
               <PhoneCall className="h-4 w-4" />
               {finalCta.ctaSecondary}
-            </motion.a>
+            </CtaActions>
           </motion.div>
         </motion.div>
       </div>

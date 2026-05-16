@@ -1,3 +1,4 @@
+import { LeadFormProvider } from "@/components/lead/LeadFormProvider";
 import { PageMotion } from "@/components/motion/PageMotion";
 import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
@@ -15,24 +16,26 @@ import { Footer } from "@/components/landing/Footer";
 
 export default function Home() {
   return (
-    <PageMotion>
-      <div className="min-h-screen bg-stone-50">
-        <Navbar />
-        <main>
-          <Hero />
-          <Problem />
-          <Solution />
-          <FeatureCards />
-          <HowItWorks />
-          <Metrics />
-          <Developer />
-          <UseCases />
-          <Testimonials />
-          <Pricing />
-          <FinalCTA />
-        </main>
-        <Footer />
-      </div>
-    </PageMotion>
+    <LeadFormProvider>
+      <PageMotion>
+        <div className="min-h-screen bg-stone-50">
+          <Navbar />
+          <main>
+            <Hero />
+            <Problem />
+            <Solution />
+            <FeatureCards />
+            <HowItWorks />
+            <Metrics />
+            <Developer />
+            <UseCases />
+            <Testimonials />
+            <Pricing />
+            <FinalCTA />
+          </main>
+          <Footer />
+        </div>
+      </PageMotion>
+    </LeadFormProvider>
   );
 }
